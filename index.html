@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<link rel="icon" href="image/favicon.png" type="image/png" />
+<head>
+    <body id="body">
+        <title>MP3 Online Player</title>
+        <h1 id="title" >MP3 Online Player</h1>
+        <div id="searchContainer">
+            <img src="image/search.png" id="searchImg" onmouseenter="searchBarAnimationIn()">
+            <input type="text" id="searchBar" selected="false" placeholder="Search...">
+            <div id="resultContainer" onmouseleave="searchBarAnimationOut()"></div>
+        </div>
+        <div id="buttons">
+            <img id="nocasual" class="buttons2" onclick="Casual()" src="image/casualdeselected.png">
+            <img id="back" class="buttons1" onclick="Back()" src="image/prev_song.png">
+            <img id="pause" class="buttons1" name="playornot" onclick="Pause()" src="image/play_button.png">
+            <img id="next" class="buttons1" src="image/next_song.png" onclick="nextSong()">
+            <img id="noloop" class="buttons2" onclick="Loop()" src="image/deselectedloop.png">
+            <audio id="canzone" type="audio/mpeg" src="" ></audio>
+            <div id="timeContainer">
+                <label id="startTime">--:--</label>
+                <input id="time" type="range" step="0.00001" min="0" max="NaN">
+                <label id="endTime">--:--</label>
+            </div>
+            <div id="volumeContainer">
+                <img src="image/volume3.png" id="volumeImg" onmouseenter="volumeBarAnimationIn()">
+                <input step=0.0000000001 type="range" id="volumeBar" min=0 max=1 value=1  onmouseleave="volumeBarAnimationOut()">
+            </div>
+        </div>
+        <div id=box1>
+
+        </div>
+        <div id=box2>
+            <button id="tutta" class="plsongs" onclick="playList('tutta')">All the music</button>
+            <button id="pl1" class="plsongs" onclick="playList('pl1')">Playlist 1</button>
+            <button id="pl2" class="plsongs" onclick="playList('pl2')">Playlist 2</button>
+            <button id="pl3" class="plsongs" onclick="playList('pl3')">Playlist 3</button>
+            <button id="pl4" class="plsongs" onclick="playList('pl4')">Playlist 4</button>
+        </div>
+        <div id="dragHereToNext1" ondrop="handleDrop1(event)" ondragover="allowDrop1(event)" ondragleave="dragLeave1()"><span class=dropText>DROP HERE TO PLAY AS NEXT</span></div>
+        <div id="dragHereToNext2" ondrop="handleDrop2(event)" ondragover="allowDrop2(event)" ondragleave="dragLeave2()"><span class=dropText>DROP HERE TO PLAY AS LAST</span></div>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </body>
+</head>

@@ -1,0 +1,286 @@
+head, body{
+    position: static;
+    background-image: radial-gradient(circle at 0% 0%, #363131 0, #2f1e20 16.67%, #1c1315 33.33%, #000000 50%, #000000 66.67%, #000000 83.33%, #000000 100%);    user-select: none;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#title{
+    color:red;
+    font-family: Arial, Helvetica, sans-serif;
+    filter: drop-shadow(2px 3px 2px darkred);
+    text-align: center;
+    font-size: xx-large;
+    font-weight: 900;
+    cursor: auto;
+}
+
+#buttons{
+    width: fit-content;
+    height: fit-content;
+    left: 50%;
+    right: 50%;
+    margin: 0 auto;
+}
+
+.buttons1{
+    width: 50px;
+    height: 50px;
+    margin-left: 3px;
+    margin-right: 3px;
+    transition-timing-function: ease;
+    transition-duration: 0.2s;
+}
+
+.buttons1:hover{
+    transform: translateY(-7px);
+    filter: drop-shadow(2px 2px 3px red);
+}
+
+.buttons2{
+    width: 50px;
+    height: 50px;
+    margin-left: 3px;
+    margin-right: 3px;
+    transition-timing-function: ease;
+    transition-duration: 0.4s;
+}
+
+.buttons2:hover{
+    transform: rotate(360deg);
+    filter: drop-shadow(2px 2px 3px red);
+}
+
+#nocasual{
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+}
+
+#casual{
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+}
+
+#startTime{
+    position: absolute;
+    color: white;
+    z-index: 1;
+    left: 8%;
+    top: 165px;
+    font-family: arial;
+}
+
+#endTime{
+    position: absolute;
+    color: white;
+    z-index: 1;
+    right: 8%;
+    top: 165px;
+    font-family: arial;
+}
+
+#time{
+    width: 70%;
+    height: 10px;
+    background-image: linear-gradient(90deg, black, rgb(131, 0, 0), rgb(255,0,0));
+    border-radius: 5px;
+    appearance: none;
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,50%);
+}
+
+#volumeContainer{
+    position: absolute;
+    height: 40px;
+    width: 190px;
+    background-color: transparent;
+    top: 400px;
+    left: 57%;
+}
+
+#volumeImg{
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    position: absolute;
+    top: -5px;
+}
+
+#volumeBar{
+    appearance: none;
+    background-image: linear-gradient(90deg, black, rgb(131, 0, 0), rgb(255,0,0));
+    border-radius: 10px;
+    height: 10px;
+    width: 0px;
+    position: relative;
+    left: -1px;
+    top: 13px;
+    visibility: hidden;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+}
+
+#searchContainer{
+    position: absolute;
+    height: 40px;
+    width: 40%;
+    background-color: transparent;
+    top: 450px;
+    left: 57%;
+}
+
+#searchImg{
+    height: 40px;
+    width: 40px;
+    z-index: 1;
+    visibility: visible;
+}
+
+#searchBar{
+    height: 28px;
+    width: 30px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 30px;
+    border-style: double;
+    border-color: red;
+    border-width: 5px 5px 5px 0px;
+    background-color: transparent;
+    z-index: 0;
+    visibility: hidden;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+    text-align: center;
+    color: white;
+    font-family: arial;
+    outline: none;
+}
+
+#resultContainer{
+    position: absolute;
+    height: 150px;
+    width: 90%;
+    background-color: transparent;
+    top: 40px;
+    left: 20px;
+    visibility: hidden;
+    transition-timing-function: ease;
+    transition-duration: 0.5s;
+    overflow-y: scroll;
+}
+
+#box1{
+    width: 500px;
+    height: 500px;
+    border-width: 5px 5px 5px 5px red;
+}
+
+#box1{
+    position: relative;
+    height: 250px;
+    width: 45%;
+    border: 7px solid red;
+    border-radius: 10px;
+    background-color: transparent;
+    left: 2%;
+    top: 90px;
+    overflow-y: scroll;
+}
+
+#box2{
+    position: absolute;
+    height: 100px;
+    width: 35%;
+    border: 7px solid red;
+    border-radius: 10px;
+    background-color: transparent;
+    right: 2%;
+    top: 250px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.plsongs{
+    text-align: start;
+    position: relative;
+    display: block;
+    overflow-y: hidden;
+    color: white;
+    width: 100%;
+    height: 25px;
+    background-color: transparent;
+    border: 2px solid red;
+    box-shadow: none;
+    font-family: Arial;
+    font-size: medium;
+    font-weight: 900;
+    transition-timing-function: ease;
+    transition-duration: 0.2s;
+}
+
+.plsongs:hover{
+    background-color: red;
+    height: 35px;
+}
+
+.songs{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: 2px solid red;
+    font-size: medium;
+    font-weight: 900;
+    text-align: start;
+    height: 25px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+}
+
+.songs:hover{
+    background-color: red;
+    height: 44px;
+}
+
+#dragHereToNext1{
+    height: 100px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    left: 25%;
+    border-right: 5px solid black;
+    text-align: center;
+    font-family: arial;
+    color: black;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+#dragHereToNext2{
+    height: 100px;
+    width: 0%;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    right: 25%;
+    border-left: 5px solid black;
+    text-align: center;
+    font-family: arial;
+    color: black;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.dropText{
+    font-size: x-large;
+    font-weight: 900;
+    position: relative;
+    top: 15%;
+}
